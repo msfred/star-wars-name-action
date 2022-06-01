@@ -10,12 +10,10 @@ inputs:
   FirstName:
     description: Your given name
     required: true
-    default: Adam
 
   LastName:
     description: Your surname
     required: true
-    default: Man
 
   BirthTown:
     description: Name of the town you were born in
