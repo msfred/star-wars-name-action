@@ -1,0 +1,16 @@
+{
+  "name": "star-wars-name-action",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Takes input and returns a Star Wars sounding name.  Uses the following algorithm to generate the Star Wars name.\r - Star Wars First Name: 1st 3 letters of last name + 1st 2 letters of firstname\r - Star Wars Last Name: 1st 2 letters of mother's maiden name + 1st 3 letters of birth city",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.7.0"
+  }
+}

@@ -1,0 +1,22 @@
+name: Test the Star Wars Name Action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Retrieve Star Wars Name
+      id: star-wars-name
+      uses: msfred/star-wars-name-action@v1
+      with:
+        FirstName: Robert
+        LastName: England
+        BirthTown: London
+        MaidenName: Stewart
+
+    - name: Display the Star Wars name
+      run: |
+        echo 'Star Wars name: ${{steps.star-wars-name.outputs.StarWarsName}}'

@@ -1,0 +1,36 @@
+name: Star Wars Name
+
+author: Fred Gohsman
+
+description: Generates your Star Wars name
+
+runs:
+  using: node12
+  main: main.js
+
+inputs:
+  FirstName:
+    description: Your given name
+    required: true
+    default: Adam
+
+  LastName:
+    description: Your surname
+    required: true
+    default: Man
+
+  BirthTown:
+    description: Name of the town you were born in
+    required: true
+
+  MaidenName:
+    description: The surname of your mother before marriage
+    required: true
+    
+outputs:
+  StarWarsName:
+    description: Your name if you were a Star Wars character
+
+branding:
+  icon: award
+  color: green
