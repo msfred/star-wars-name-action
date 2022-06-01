@@ -1,7 +1,5 @@
 name: Star Wars Name
-
 author: Fred Gohsman
-
 description: Generates your Star Wars name
 
 runs:
