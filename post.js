@@ -1,0 +1,1 @@
+console.warn('Script that runs after the main.js script')
