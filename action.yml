@@ -1,32 +1,32 @@
-name: Star Wars Name
-author: Fred Gohsman
-description: Generates your Star Wars name
+name: 'Star Wars Name'
+author: 'Fred Gohsman'
+description: 'Generates your Star Wars name'
 
 runs:
-  using: node16
-  main: main.js
+  using: 'node16'
+  main: 'main.js'
 
 inputs:
   FirstName:
-    description: Your given name
+    description: 'Your given name'
     required: true
 
   LastName:
-    description: Your surname
+    description: 'Your surname'
     required: true
 
   BirthTown:
-    description: Name of the town you were born in
+    description: 'Name of the town you were born in'
     required: true
 
   MaidenName:
-    description: The surname of your mother before marriage
+    description: 'The surname of your mother before marriage'
     required: true
     
 outputs:
   StarWarsName:
-    description: Your name if you were a Star Wars character
+    description: 'Your name if you were a Star Wars character'
 
 branding:
-  icon: award
-  color: green
+  icon: 'award'
+  color: 'green'
