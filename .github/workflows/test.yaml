@@ -17,7 +17,7 @@ jobs:
     steps:
     - name: Retrieve Star Wars Name
       id: star-wars-name
-      uses: msfred/star-wars-name-action@v1
+      uses: msfred/star-wars-name-action@log
       with:
         FirstName: ${{ env.firstName }}
         LastName: ${{ env.lastName }}
