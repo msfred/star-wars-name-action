@@ -3,7 +3,7 @@ author: Fred Gohsman
 description: Generates your Star Wars name
 
 runs:
-  using: node12
+  using: node16
   main: main.js
 
 inputs:
