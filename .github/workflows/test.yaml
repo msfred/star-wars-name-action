@@ -3,32 +3,26 @@ name: Test the Star Wars Name Action
 on:
   workflow_dispatch:
 
-env:
-  firstName: Robert
-  lastName: England
-  birthTown: London
-  maidenName: Stewart
-
 jobs:
   generate-star-wars-name:
     name: Generate Star Wars Name
     runs-on: ubuntu-latest
 
     steps:
-    - name: Retrieve Star Wars Name
+    - name: Generate Star Wars Name for Robert England
       id: star-wars-name
       uses: msfred/star-wars-name-action@log
       with:
-        FirstName: ${{ env.firstName }}
-        LastName: ${{ env.lastName }}
-        BirthTown: ${{ env.birthTown }}
-        MaidenName: ${{ env.maidenName }}
+        FirstName: Robert
+        LastName: England
+        BirthTown: London
+        MaidenName: Stewart
 
-    - name: Display the Star Wars name to the Actions Log
-      run: |
-        echo 'Star Wars name: ${{steps.star-wars-name.outputs.StarWarsName}}'
-
-    - name: Display the Star Wars name to the Summary Log
-      run: |
-        echo 'The Star Wars name for ${{ env.firstName }} ${{ env.lastName }} is:' >> $GITHUB_STEP_SUMMARY
-        echo '## ${{steps.star-wars-name.outputs.StarWarsName}}' >> $GITHUB_STEP_SUMMARY
+    - name: Generate Star Wars Name for Fred Gohsman
+      id: star-wars-name
+      uses: msfred/star-wars-name-action@log
+      with:
+        FirstName: Fred
+        LastName: Gohsman
+        BirthTown: Saginaw
+        MaidenName: Reynolds
