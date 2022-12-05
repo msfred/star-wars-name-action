@@ -5,29 +5,30 @@ on:
 
 jobs:
   generate-star-wars-name:
-    name: Generate Star Wars Name
-    runs-on: ubuntu-latest
+    name: 'Generate Star Wars Name'
+    runs-on: 'ubuntu-latest'
 
     steps:
-    - name: Generate Star Wars Name for Robert England
+    - name: 'Generate Star Wars Name for Robert England'
       id: roberts-star-wars-name
       uses: msfred/star-wars-name-action@v1
       with:
-        FirstName: Robert
-        LastName: England
-        BirthTown: London
-        MaidenName: Stewart
+        FirstName: 'Robert'
+        LastName: 'England'
+        BirthTown: 'London'
+        MaidenName: 'Stewart'
 
-    - name: Generate Star Wars Name for Fred Gohsman
+    - name: 'Generate Star Wars Name for Fred Gohsman'
       id: freds-star-wars-name
       uses: msfred/star-wars-name-action@v1
       with:
-        FirstName: Fred
-        LastName: Gohsman
-        BirthTown: Saginaw
-        MaidenName: Reynolds
+        FirstName: 'Fred'
+        LastName: 'Gohsman'
+        BirthTown: 'Saginaw'
+        MaidenName: 'Reynolds'
 
-    - name: Use output from Action later
+    - name: 'Use output from Action later'
       run: |
         echo 'Generated name for Robert England: ${{ steps.roberts-star-wars-name.outputs.StarWarsName }}'
         echo 'Generated name for Fred Gohsman: ${{ steps.freds-star-wars-name.outputs.StarWarsName }}'
+  
