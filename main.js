@@ -6,9 +6,9 @@ const run = async () => {
     const birthTown = core.getInput('BirthTown')
     const maidenName = core.getInput('MaidenName')
 
+    // Generate the name
     const name = `${lastName.slice(0, 3)}${firstName.slice(0, 2).toLowerCase()} ${maidenName.slice(0, 2)}${birthTown.slice(0, 3).toLowerCase()}`
-    core.setOutput('StarWarsName', name)
-
+    
     // Add GitHub Summary Log Entry
     await core.summary
         .addHeading('Star Wars Name Generator')
@@ -18,6 +18,9 @@ const run = async () => {
         ])
         .addHeading(name, 2)
         .write()
+
+    // Save the name to an output variable
+    core.setOutput('StarWarsName', name)
 }
 
 run()
