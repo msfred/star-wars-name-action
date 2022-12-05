@@ -17,6 +17,10 @@ jobs:
         BirthTown: London
         MaidenName: Stewart
 
-    - name: Display the Star Wars name
+    - name: Display the Star Wars name to the Actions Log
       run: |
         echo 'Star Wars name: ${{steps.star-wars-name.outputs.StarWarsName}}'
+
+    - name: Display the Star Wars name to the Summary Log
+      run: |
+        echo 'Star Wars name: ${{steps.star-wars-name.outputs.StarWarsName}}' >> $GITHUB_STEP_SUMMARY
