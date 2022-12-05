@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Generate Star Wars Name for Robert England
       id: roberts-star-wars-name
-      uses: msfred/star-wars-name-action@log
+      uses: msfred/star-wars-name-action@v1
       with:
         FirstName: Robert
         LastName: England
@@ -20,7 +20,7 @@ jobs:
 
     - name: Generate Star Wars Name for Fred Gohsman
       id: freds-star-wars-name
-      uses: msfred/star-wars-name-action@log
+      uses: msfred/star-wars-name-action@v1
       with:
         FirstName: Fred
         LastName: Gohsman
