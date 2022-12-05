@@ -31,4 +31,4 @@ jobs:
     - name: Display the Star Wars name to the Summary Log
       run: |
         echo 'The Star Wars name for ${{ env.firstName }} ${{ env.lastName }} is:' >> $GITHUB_STEP_SUMMARY
-        echo '##${{steps.star-wars-name.outputs.StarWarsName}}' >> $GITHUB_STEP_SUMMARY
+        echo '## ${{steps.star-wars-name.outputs.StarWarsName}}' >> $GITHUB_STEP_SUMMARY
