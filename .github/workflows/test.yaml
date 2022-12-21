@@ -2,6 +2,27 @@ name: Test the Star Wars Name Action
 
 on:
   workflow_dispatch:
+    inputs:
+      FirstName:
+        description: 'Your first name'
+        type: string
+        default: 'William'
+        required: true
+      LastName:
+        description: 'Your last name'
+        type: string
+        default: 'Gates'
+        required: true
+      BirthTown:
+        description: 'The town where you were born'
+        type: string
+        default: 'Seattle'
+        required: true
+      MaidenName:
+        description: 'Your mother''s maiden name.  ie, last name before marriage'
+        type: string
+        default: 'Maxwell'
+        required: true
 
 jobs:
   generate-star-wars-name:
@@ -13,19 +34,10 @@ jobs:
       id: roberts-star-wars-name
       uses: msfred/star-wars-name-action@v1
       with:
-        FirstName: 'Robert'
-        LastName: 'England'
-        BirthTown: 'London'
-        MaidenName: 'Stewart'
-
-    - name: 'Generate Star Wars Name for Fred Gohsman'
-      id: freds-star-wars-name
-      uses: msfred/star-wars-name-action@v1
-      with:
-        FirstName: 'Fred'
-        LastName: 'Gohsman'
-        BirthTown: 'Saginaw'
-        MaidenName: 'Reynolds'
+        FirstName: ${{ inputs.FirstName }}
+        LastName: ${{ inputs.LastName }}
+        BirthTown: ${{ inputs.BirthTown }}
+        MaidenName: ${{ inputs.MaidenName }}
 
     - name: 'Use output from Action later'
       run: |
